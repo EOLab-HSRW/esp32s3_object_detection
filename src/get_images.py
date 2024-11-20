@@ -3,7 +3,7 @@ import requests
 import os
 import time
 from loguru import logger
-URL = "http://192.168.2.222"
+URL = "http://192.168.2.230"
 
 def test_connection():
     try:
