@@ -36,6 +36,7 @@ def set_resolution(selected_resolution):
 
 def showWindow():
     if __name__ == '__main__':
+        cv2.namedWindow("frame", cv2.WINDOW_AUTOSIZE)
         while True:
             if cap.isOpened():
                 ret, frame = cap.read()
