@@ -14,6 +14,8 @@ certifi==2024.8.30
     # via requests
 charset-normalizer==3.4.0
     # via requests
+colorama==0.4.6
+    # via loguru
 idna==3.10
     # via requests
 loguru==0.7.2
@@ -26,3 +28,5 @@ requests==2.32.3
     # via esp32s3-object-detection
 urllib3==2.2.3
     # via requests
+win32-setctime==1.1.0
+    # via loguru

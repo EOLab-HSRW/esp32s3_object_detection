@@ -26,3 +26,7 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/esp32s3_object_detection"]
+
+[tool.rye.scripts]
+# Run Script
+get_images = "python ./src/get_images.py"
