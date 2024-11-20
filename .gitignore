@@ -10,4 +10,4 @@ wheels/
 .venv
 
 #data
-./src/images/*.jpg
+src/images/*.jpg
