@@ -1,6 +1,6 @@
 import cv2
 import requests
-import os
+from pathlib import Path # handle better relative paths
 import time
 from loguru import logger
 URL = "http://192.168.2.230"
@@ -47,7 +47,7 @@ def showWindow():
 
                 for i in range(9):
                     if key == ord(str(i)):
-                        cv2.imwrite('{}/{}-{}.jpg'.format(images_path, i, time.time() * 1000), frame)
+                        cv2.imwrite('{}/{}-{}.jpg'.format(images_path.resolve(), i, time.time() * 1000), frame)
                         logger.debug("saved picture of class: {}".format(i))
 
                 if key == ord('q'):
@@ -61,8 +61,9 @@ logger.debug("Testing Connection.")
 if test_connection():
     logger.debug("Connection successful.")
     cap = cv2.VideoCapture(URL + ":81/stream")
-    images_path = os.path.join(os.path.dirname(__file__), 'images')
-    os.makedirs(images_path, exist_ok=True)
+    images_path = Path("../data/raw/images")
+    if not images_path.resolve().exists():
+        images_path.resolve().mkdir(parents=True)
     set_resolution(4)
     showWindow()
 else:
