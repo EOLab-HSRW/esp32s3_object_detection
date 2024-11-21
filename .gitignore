@@ -10,5 +10,9 @@ wheels/
 # venv
 .venv
 
+#dev_project
+src/ei-clein2312-project-1-duck_detection/
+
 #data
 src/images/*.jpg
+data/
