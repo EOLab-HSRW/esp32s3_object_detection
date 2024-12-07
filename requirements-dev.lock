@@ -113,6 +113,8 @@ jinja2==3.1.4
     # via jupyterlab
     # via jupyterlab-server
     # via nbconvert
+joblib==1.4.2
+    # via scikit-learn
 json5==0.10.0
     # via jupyterlab-server
 jsonpointer==3.0.0
@@ -204,6 +206,8 @@ numpy==2.0.2
     # via matplotlib
     # via ml-dtypes
     # via opencv-python
+    # via scikit-learn
+    # via scipy
     # via tensorboard
     # via tensorflow
 opencv-python==4.10.0.84
@@ -293,6 +297,10 @@ rich==13.9.4
 rpds-py==0.22.3
     # via jsonschema
     # via referencing
+scikit-learn==1.5.2
+    # via esp32s3-object-detection
+scipy==1.14.1
+    # via scikit-learn
 send2trash==1.8.3
     # via jupyter-server
 setuptools==75.6.0
@@ -323,6 +331,8 @@ termcolor==2.5.0
 terminado==0.18.1
     # via jupyter-server
     # via jupyter-server-terminals
+threadpoolctl==3.5.0
+    # via scikit-learn
 tinycss2==1.4.0
     # via nbconvert
 tornado==6.4.2
