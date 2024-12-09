@@ -74,6 +74,7 @@ fastjsonschema==2.21.1
     # via nbformat
 flatbuffers==24.3.25
     # via tensorflow
+    # via tflite
 fonttools==4.55.2
     # via matplotlib
 fqdn==1.5.1
@@ -155,9 +156,14 @@ jupyterlab-pygments==0.3.0
 jupyterlab-server==2.27.3
     # via jupyterlab
 keras==3.7.0
+    # via keras-tuner
     # via tensorflow
+keras-tuner==1.4.7
+    # via esp32s3-object-detection
 kiwisolver==1.4.7
     # via matplotlib
+kt-legacy==1.0.5
+    # via keras-tuner
 libclang==18.1.1
     # via tensorflow
 loguru==0.7.2
@@ -207,6 +213,7 @@ numpy==2.0.2
     # via scipy
     # via tensorboard
     # via tensorflow
+    # via tflite
 opencv-python==4.10.0.84
     # via esp32s3-object-detection
 opt-einsum==3.4.0
@@ -221,6 +228,7 @@ packaging==24.2
     # via jupyterlab
     # via jupyterlab-server
     # via keras
+    # via keras-tuner
     # via matplotlib
     # via nbconvert
     # via tensorboard
@@ -284,6 +292,7 @@ requests==2.32.3
     # via edgeimpulse
     # via esp32s3-object-detection
     # via jupyterlab-server
+    # via keras-tuner
     # via python-socketio
     # via tensorflow
 rfc3339-validator==0.1.4
@@ -333,6 +342,8 @@ termcolor==2.5.0
 terminado==0.18.1
     # via jupyter-server
     # via jupyter-server-terminals
+tflite==2.10.0
+    # via esp32s3-object-detection
 threadpoolctl==3.5.0
     # via scikit-learn
 tinycss2==1.4.0

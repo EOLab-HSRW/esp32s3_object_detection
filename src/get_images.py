@@ -3,7 +3,8 @@ import requests
 from pathlib import Path # handle better relative paths
 import time
 from loguru import logger
-URL = "http://192.168.2.230"
+URL = "http://192.168.1.112"
+
 
 def test_connection():
     try:
@@ -37,6 +38,7 @@ def set_resolution(selected_resolution):
 def showWindow():
     if __name__ == '__main__':
         cv2.namedWindow("frame", cv2.WINDOW_AUTOSIZE)
+        key = cv2.waitKey(1)
         while True:
             if cap.isOpened():
                 ret, frame = cap.read()
@@ -47,7 +49,10 @@ def showWindow():
 
                 for i in range(9):
                     if key == ord(str(i)):
-                        cv2.imwrite('{}/{}-{}.jpg'.format(images_path.resolve(), i, time.time() * 1000), frame)
+                        save_path = (images_path / str(i)).resolve()
+                        if not save_path.exists():
+                            save_path.mkdir(parents=False)
+                        cv2.imwrite('{}/{}-{}.jpg'.format(save_path, i, time.time() * 1000), frame)
                         logger.debug("saved picture of class: {}".format(i))
 
                 if key == ord('q'):
@@ -61,7 +66,7 @@ logger.debug("Testing Connection.")
 if test_connection():
     logger.debug("Connection successful.")
     cap = cv2.VideoCapture(URL + ":81/stream")
-    images_path = Path("../data/raw/images")
+    images_path = Path("data/raw/images")
     if not images_path.resolve().exists():
         images_path.resolve().mkdir(parents=True)
     set_resolution(4)

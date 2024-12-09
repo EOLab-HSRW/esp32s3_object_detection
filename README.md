@@ -1,5 +1,28 @@
 # esp32s3_object_detection
 
+## Arduino
+
+- Boards manager
+- esp32 by Espressif Systems. Important! version 2.0.14
+- examples-> esp32 -> camera -> cameraserver
+    - modify the code for the right board
+    - ssid: iotlab-mobile
+    - pass: iotlab18
+    - upload
+    - open serial monitor
+    - copy IP address
+- Go to src/get_images.py and update the IP address
+- Open a terminal and navigate to the folder with the .toml file
+- Check if you can run rye (type rye)
+    - if not source "$HOME/.rye/env"
+- run the camera server:
+    -type rye run get_images
+
+## After deploying the model
+
+- Add the zip library to Arduino
+- Modify the features[] from static_buffer example
+
 ## Remember to activaze the psram option
 
 ## Update the pins of the Microcontroller

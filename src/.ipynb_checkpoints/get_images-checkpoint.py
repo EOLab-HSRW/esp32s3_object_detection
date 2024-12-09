@@ -5,6 +5,7 @@ import time
 from loguru import logger
 URL = "http://192.168.2.230"
 
+
 def test_connection():
     try:
         requests.get(URL + "/status", timeout=10)
@@ -47,7 +48,8 @@ def showWindow():
 
                 for i in range(9):
                     if key == ord(str(i)):
-                        cv2.imwrite('{}/{}-{}.jpg'.format(images_path.resolve(), i, time.time() * 1000), frame)
+                        save_path = images_path / str(i)
+                        cv2.imwrite('{}/{}-{}.jpg'.format(save_path.resolve(), i, time.time() * 1000), frame)
                         logger.debug("saved picture of class: {}".format(i))
 
                 if key == ord('q'):
