@@ -1,4 +1,53 @@
-# esp32s3_object_detection
+# Workshop: Practical Introduction to Artificial Intelligence on Embedded Devices
+
+For this project you will need some dependencies. The project uses python version > 3.8, and dependencies are defined within the pyproject.toml file. 
+We will build the dependencies using Rye. Details on the installation below. Also you will need Arduino IDE.
+We will work with the Seeed Studio XIAO ESP32S3 with camera module. You will also be provided with a servomotor, an antenna and a 3d printed case.
+
+Let start by downloading the software needed.
+
+## Installing Rye
+We will use Rye fo installing our dependencies. If you want to know more about it, you can watch the [introduction video about rye](https://rye.astral.sh/guide/)
+
+### Installation for Linux
+
+1. Open your Terminal
+1. install [rye](https://rye.astral.sh/) with `curl -sSf https://rye.astral.sh/get | bash`
+
+run through the installer like this:
+- platform linux: yes
+- preferred package installer: uv
+- Run a Python installed and managed by Rye
+- which version of python should be used as default: 3.10
+- should the installer add Rye to PATH via .profile? : y
+- run in the cli: `source "$HOME/.rye/env"`
+
+### Installation for Mac
+
+1. Open your Terminal
+1. install [rye](https://rye.astral.sh/) with `curl -sSf https://rye.astral.sh/get | bash`
+
+run through the installer like this:
+- platform macos: yes
+- Run the old default Python (provided by your OS, pyenv, etc.)
+- should the installer add Rye to PATH via .profile? : y
+- run in the terminal: `source "$HOME/.rye/env"`
+- install python 3.10 as follow: `rye fetch 3.10`
+
+### Installation for Windows
+
+
+1. Activate "Developer Mode" on Windows. Follow the instruction of **Windows Developer Mode** [See this page](https://rye.astral.sh/guide/faq/#windows-developer-mode)
+1. Download and install the latest release of [rye](https://rye.astral.sh/) 
+
+## Installing dependencies with Rye
+
+1. Clone or download the files of this repository
+1. Open the terminal and cd to the root directory of the downloaded repository (where the .toml file is): `cd path-to-root-folder`
+1. In the terminal run: `rye sync`
+
+
+
 
 ## Arduino
 
