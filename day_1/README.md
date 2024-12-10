@@ -1,12 +1,15 @@
-# Image Classification with EDGE IMPULSE (Duckie, cherry or tomato? )
+# Day 1: Image Classification with EDGE IMPULSE (Example: Duckie, cherry or tomato?)
 In day one we will assemble our material and run a small test on the microcontroller. Afterwards, you will start gathering a dataset of Duckies, cherries and tomatoes and then we will go to edge impulse to create am image classifier and deploy it in your microcontroller.
 
 ## Your Microcontroller
-We are working with [XIAO-ESP32-S3 Sense from Seed Studio](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html)
+We are working with [XIAO-ESP32-S3 Sense from Seeed Studio](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html)
 
-in order to test it we will do the following:
+Key specifications of the ESP32-S3:
+- Xtensa LX7 **dual-core**, 32-bit processor that operates at up to **240 MHz**
+- On-chip 8M PSRAM & 8MB Flash
+- additional support for vector instructions - [AI Acceleration Support](https://www.espressif.com/en/products/socs/esp32-s3?form=MG0AV3) - [ESP-NN](https://github.com/espressif/esp-nn)
 
-first we need to install the libraries of the microcontroller. Make sure that you install the version 2.0.14 from Espressif Systems.
+In order to work with it we will do the following:
 
 ### Installing the library
 
@@ -14,11 +17,10 @@ first we need to install the libraries of the microcontroller. Make sure that yo
 - Navigate to "File" > "Preferences", and add to "Additional Boards Manager URLs" this url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 - Open the "Boards manager": "Board" Symbol on the left side of the screen OR "Tools" > "Board" > "Boards Manager..."
 - Search for "esp32" by Espressif Systems. Install the ESP board - **!Important!** version 2.0.14
-- Plugin your MCU, and select in the Arduino IDE the right COM port and the right board-type ("XIAO ESP32S3")
 
 ### Testing the Microcontroller with the blink example
 - Go to File -> Examples -> Basic -> Blink
-- Connect your microcontroller
+- Connect your MCU with a USB cable to the Computer, and select in the Arduino IDE the right COM port and the right board-type ("XIAO ESP32S3")
 - Upload the code. The built-in LED should start blinking.
 
 ## Gathering data
@@ -38,7 +40,8 @@ For this
 - make sure your PC/Laptop is connected to the same network as mentioned above
 - run the camera server:
     -type rye run get_images
-- By typing a digit you will save the corresponding image on the root folder under ./data/raw/ in a separate folder
+- By typing a digit (0-9) you will save the corresponding image on the root folder under ./data/raw/ in a separate folder
+- Recommended: One folder per object
 - We recommend taking at least 70 images per object. 
 
 ## Training and Deploying the Classifier in Edge Impulse
@@ -49,14 +52,12 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 
 ## Running inferences
 
-### After deploying the model
-
+### Test the model
 - Add the zip library to Arduino
 - Modify the features[] from static_buffer example
 
-### Remember to activate the psram option
-
-### Update the pins of the Microcontroller for the inference example
+### Running live inferences
+- Update the pins of the Microcontroller
 ```
 #define PWDN_GPIO_NUM     -1
 #define RESET_GPIO_NUM    -1
@@ -76,9 +77,5 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 #define VSYNC_GPIO_NUM    38
 #define HREF_GPIO_NUM     47
 #define PCLK_GPIO_NUM     13
-
-
-
 ```
-
-Project buzilt with Rye
+- Remember to activate the psram when uploading
