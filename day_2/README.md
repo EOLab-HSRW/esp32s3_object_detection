@@ -1,4 +1,4 @@
-# Under the Hood. Running the training locally
+# Under the Hood. Running the training locally [Under construction]
 Until now we used edge impulse studio to go over our complete machine learning pipeline. However, Edge Impulse Studio has a limitation of training time of 20 minutes CPU for free accounts. More over, you can have a maximum of 3 Impulses for model comparisons.
 
 Today we will see how to overcome this limitation by training in our local computer. This time we will use 
