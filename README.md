@@ -72,28 +72,7 @@ If you don't have it already, please download  and install the IDE from the [off
 [Day 2](./day_1/README.md)
 [Day 3](./day_1/README.md)
 
-## Arduino
-
-- Open Arduino IDE
-- Navigate to "File" > "Preferences", and add to "Additional Boards Manager URLs" this url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-- Open the "Boards manager": "Board" Symbol on the left side of the screen OR "Tools" > "Board" > "Boards Manager..."
-- Search for "esp32" by Espressif Systems. Install the ESP board - !Important! version 2.0.14
-- Plugin your MCU, and select in the Arduino IDE the right COM port and the right board-type ("XIAO ESP32S3")
-- "File" > "Examples" > "esp32" > "camera" > "camera webserver"
-    - modify the code for the right board
-    - ssid: given in workshop
-    - pass: given in workshop
-    - upload
-    - open serial monitor
-    - copy IP address
-- Go to src/get_images.py and update the IP address
-- Open a terminal and navigate to the folder with the .toml file
-- Check if you can run rye (type rye)
-    - if not source "$HOME/.rye/env"
-- make sure your PC/Laptop is connected to the same network as mentioned above
-- run the camera server:
-    -type rye run get_images
-
+# From here on only copy this last place where it belongs in the readme of day1, 2 or 3
 ## After deploying the model
 
 - Add the zip library to Arduino

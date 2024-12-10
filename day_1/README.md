@@ -18,32 +18,26 @@ first we need to install the libraries of the microcontroller. Make sure that yo
 
 ### Testing the Microcontroller with the blink example
 - Go to File -> Examples -> Basic -> Blink
-- **!!Important** 
+- Connect your microcontroller
+- Upload the code. The built-in LED should start blinking.
 
-
-
-
+## Gathering data
+We will use the camera server to gather the samples for our model. 
+For this
 - "File" > "Examples" > "esp32" > "camera" > "camera webserver"
-    - modify the code for the right board
+    - modify the code for the right board (comment and uncomment defines)
     - ssid: given in workshop
     - pass: given in workshop
     - upload
     - open serial monitor
     - copy IP address
-- Go to src/get_images.py and update the IP address
+- With your code/text editor open get_images.py and update the IP address
 - Open a terminal and navigate to the folder with the .toml file
 - Check if you can run rye (type rye)
     - if not source "$HOME/.rye/env"
 - make sure your PC/Laptop is connected to the same network as mentioned above
 - run the camera server:
     -type rye run get_images
-## Setup
-- Create an account in Edge Impulse: https://edgeimpulse.com
-- Create a new personal project
-- Clone the CIFAR Dataset repository: https://github.com/YoongiKim/CIFAR-10-images/
-- Add Existing Data (Select two classes to start with)
-    - Creating Windows...
-    - Creating Embeddings
 
 
 ```

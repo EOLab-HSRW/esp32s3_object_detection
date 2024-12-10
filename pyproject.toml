@@ -36,4 +36,4 @@ packages = ["src/esp32s3_object_detection"]
 
 [tool.rye.scripts]
 # Run Script
-get_images = "python ./src/get_images.py"
+get_images = "python ./day_1/get_images.py"
