@@ -1,4 +1,4 @@
-# Image Classification with EDGE IMPULSE (Duckie, cherry or tomato? )
+# Day 1: Image Classification with EDGE IMPULSE (Example: Duckie, cherry or tomato?)
 In day one we will assemble our material and run a small test on the microcontroller. Afterwards, you will start gathering a dataset of Duckies, cherries and tomatoes and then we will go to edge impulse to create am image classifier and deploy it in your microcontroller.
 
 ## Your Microcontroller
