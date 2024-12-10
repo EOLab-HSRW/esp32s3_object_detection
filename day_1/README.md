@@ -38,6 +38,13 @@ For this
 - make sure your PC/Laptop is connected to the same network as mentioned above
 - run the camera server:
     -type rye run get_images
+- By typing a digit you will save the corresponding image on the root folder under ./data/raw/ in a separate folder
+- We recommend taking at least 70 images per object. 
+
+## Training and Deploying the Classifier in Edge Impulse
+First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com/login) and create a new project. (You are limited to 2 private projects in the free version)
+
+
 
 
 ```
