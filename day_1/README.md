@@ -53,13 +53,11 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 ## Running inferences
 
 ### Test the model
-
 - Add the zip library to Arduino
 - Modify the features[] from static_buffer example
 
 ### Running live inferences
-
-- Update the pins of the Microcontroller for the inference example
+- Update the pins of the Microcontroller
 ```
 #define PWDN_GPIO_NUM     -1
 #define RESET_GPIO_NUM    -1
@@ -81,5 +79,3 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 #define PCLK_GPIO_NUM     13
 ```
 - Remember to activate the psram when uploading
-
-Project buzilt with Rye
