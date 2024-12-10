@@ -69,8 +69,8 @@ If you don't have it already, please download  and install the IDE from the [off
 
 
 [Day 1](./day_1/README.md)
-[Day 2](./day_1/README.md)
-[Day 3](./day_1/README.md)
+[Day 2](./day_2/README.md)
+[Day 3](./day_3/README.md)
 
 
 
