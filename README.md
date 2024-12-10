@@ -64,6 +64,9 @@ run through the installer like this:
 ## Downloading Arduino IDE
 If you don't have it already, please download  and install the IDE from the official site](https://www.arduino.cc/en/software)
 
+## Access Edge Impulse
+1. If you don't have an account already, please register in EdgeImpulse [official site](https://studio.edgeimpulse.com/signup)
+
 
 [Day 1](./day_1/README.md)
 [Day 2](./day_1/README.md)
