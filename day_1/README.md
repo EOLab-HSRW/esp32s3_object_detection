@@ -33,16 +33,16 @@ For this
     - upload
     - open serial monitor
     - copy IP address
-- With your code/text editor open get_images.py and update the IP address
+- With your code/text editorm open get_images.py and update the IP address in the top of the script (URL variable)
 - Open a terminal and navigate to the folder with the .toml file
 - Check if you can run rye (type rye)
     - if not cannot, then type `source "$HOME/.rye/env"`. Now you should be able to call rye.
-- make sure your PC/Laptop is connected to the same network as mentioned above
+- **make sure your PC/Laptop is connected to the same network as mentioned above**
 - run the camera server:
-    -type rye run get_images
-- By typing a digit (0-9) you will save the corresponding image on the root folder under ./data/raw/ in a separate folder
+    -type: rye run get_images
+- By pressing a digit (0-9) you will save the corresponding image on the root folder under ./data/raw/ in a separate folder ('q' to close the program)
 - Recommended: One folder per object
-- We recommend taking at least 70 images per object. 
+- We recommend taking at least 70 images per object, the object shouldn´t be to small and the image should only include the one object you want to classify. Also put the object onto other backgrounds.
 
 ## Training and Deploying the Classifier in Edge Impulse
 First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com/login) and create a new project. (You are limited to 2 private projects in the free version)
@@ -53,11 +53,13 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 ## Running inferences
 
 ### Test the model
-- Add the zip library to Arduino
-- Modify the features[] from static_buffer example
+- Add the zip library to Arduino ("Sketch" > "Include Library" > "Add .ZIP library")
+- Open "File" > "Examples" > name of your library > "static buffer" > "static buffer"
+- Modify the features[] with features data from Edge Impulse
 
 ### Running live inferences
-- Update the pins of the Microcontroller
+- Open "File" > "Examples" > name of your library > "esp32" > "esp32_camera"
+- Update the pins of the Microcontroller, delete lines XXX to XXX and paste in:
 ```
 #define PWDN_GPIO_NUM     -1
 #define RESET_GPIO_NUM    -1
@@ -78,6 +80,7 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 #define HREF_GPIO_NUM     47
 #define PCLK_GPIO_NUM     13
 ```
-- Remember to activate the psram when uploading
+- Activate the PSRAM when uploading
+- Open the Serial Monitor to see the output
 
 [Go to day 2](../day_2/README.md)
