@@ -5,12 +5,14 @@ Today we will see how to overcome this limitation by training in our local compu
 
 First we will start making a simple convolutional model from scrath.
 
-## Shallow CNN in Edge Impulse
+## Training your model
+
+### Shallow CNN in Edge Impulse
 - Create a new impulse and as training block, use a classification block
 - Leave the standard configuration and run it
 - Because of the ammount of images, you should not expect a good classifier.
 
-## Under the hood of your CNN
+### Under the hood of your CNN
 We will have a deeper look on what Edge Impulse is doing for you in the background. 
 First we will explore the notebook [Model_example.ipynb](../day_2/Model_Example.ipynb) using jupyter lab. It is already installed via rye, to run it do the following:
 
@@ -20,11 +22,11 @@ First we will explore the notebook [Model_example.ipynb](../day_2/Model_Example.
 - type `rye run python -m jupyterlab` and open the Model_example notebook from day_2 folder.
 - Run cell by cell the notebook, following the instructions it gives.
 
-## Exploring and hyperparameter tuning using keras_tuner
+### Exploring and hyperparameter tuning using keras_tuner
 Now that you know what edge impulse studio is doing, you can look for optimal hyperparameter values locally. For this, we will use the notebook [Hypertuning.ipynb](./Hypertuning.ipynb).
 You can simply open it using your jupyter notebook directory. 
 
-## Time to explore by yourself
+### Time to explore by yourself
 Your task is to improve the your model. You know that your transfer learning model from Impulse performs better. So instead of using a shallow model, let's make use of a pretrained model and adapt it to our needs. 
 We suggest you to do the following:
 
@@ -36,7 +38,16 @@ We suggest you to do the following:
 
 
 
-## Update the pins of the Microcontroller
+## Running inferences
+
+### Test the model
+- Add the zip library to Arduino ("Sketch" > "Include Library" > "Add .ZIP library")
+- Open "File" > "Examples" > name of your library > "static buffer" > "static buffer"
+- Modify the features[] with features data from Edge Impulse
+
+### Running live inferences
+- Open "File" > "Examples" > name of your library > "esp32" > "esp32_camera"
+- Update the pins of the Microcontroller, delete lines XXX to XXX and paste in:
 ```
 #define PWDN_GPIO_NUM     -1
 #define RESET_GPIO_NUM    -1
@@ -57,5 +68,6 @@ We suggest you to do the following:
 #define HREF_GPIO_NUM     47
 #define PCLK_GPIO_NUM     13
 ```
-
+- Activate the PSRAM when uploading
+- Open the Serial Monitor to see the output
 Project buzilt with Rye
