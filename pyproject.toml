@@ -3,7 +3,7 @@ name = "esp32s3-object-detection"
 version = "0.1.0"
 description = "Add your description here"
 authors = [
-    { name = "Clein Sarmiento", email = "cleinalexander.sarmientocastrillon@hochschule-rhein-waal.de" }
+    { name = "Clein Sarmiento", email = "cleinalexander.sarmientocastrillon@hochschule-rhein-waal.de" },
     { name = "Jan Sonntag", email = "jan.sonntag@hochschule-rhein-waal.de" }
 ]
 dependencies = [
