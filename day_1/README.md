@@ -36,7 +36,7 @@ For this
 - With your code/text editor open get_images.py and update the IP address
 - Open a terminal and navigate to the folder with the .toml file
 - Check if you can run rye (type rye)
-    - if not source "$HOME/.rye/env"
+    - if not cannot, then type `source "$HOME/.rye/env"`. Now you should be able to call rye.
 - make sure your PC/Laptop is connected to the same network as mentioned above
 - run the camera server:
     -type rye run get_images
@@ -79,3 +79,5 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 #define PCLK_GPIO_NUM     13
 ```
 - Remember to activate the psram when uploading
+
+[Go to day 2](../day_2/README.md)
