@@ -21,7 +21,16 @@ First we will explore the notebook [Model_example.ipynb](../day_2/Model_Example.
 - Run cell by cell the notebook, following the instructions it gives.
 
 ## Exploring and hyperparameter tuning using keras_tuner
-Now that you know what edge impulse studio is doing, you can look for optimal hyperparameter values locally. For this, we will use the notebook []()
+Now that you know what edge impulse studio is doing, you can look for optimal hyperparameter values locally. For this, we will use the notebook [Hypertuning.ipynb](./Hypertuning.ipynb).
+You can simply open it using your jupyter notebook directory. 
+
+## Time to explore by yourself
+Your task is to improve the your model. You know that your transfer learning model from Impulse performs better. So instead of using a shallow model, let's make use of a pretrained model and adapt it to our needs. 
+We suggest you to do the following:
+
+- In jupyterlab, duplicate the Hypertuning notebook and rename it, for example Hypertuning_Transfer.
+- In Edge Impulse Studio, have a look to the Impulse of the Mobilenet network you used in day1. Open the "Expert mode" to have access to the code.
+-  
 
 
 
