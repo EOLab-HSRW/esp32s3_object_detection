@@ -1,4 +1,4 @@
-# Under the Hood. Running the training locally [Under construction]
+# Under the Hood. Running the training locally 
 Until now we used edge impulse studio to go over our complete machine learning pipeline. However, Edge Impulse Studio has a limitation of training time of 20 minutes CPU for free accounts. More over, you can have a maximum of 3 Impulses for model comparisons.
 
 Today we will see how to overcome this limitation by training in our local computer. 
@@ -6,6 +6,8 @@ Today we will see how to overcome this limitation by training in our local compu
 First we will start making a simple convolutional model from scrath.
 
 ## Training your model
+
+[Edge Impulse Paper](https://arxiv.org/pdf/2212.03332)
 
 ### Shallow CNN in Edge Impulse
 - Create a new impulse and as training block, use a classification block
