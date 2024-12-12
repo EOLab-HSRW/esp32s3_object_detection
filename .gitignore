@@ -26,3 +26,5 @@ data/
 
 # day2
 day_2/my_dir/
+day_2/*.zip
+day_2/*.tflite
