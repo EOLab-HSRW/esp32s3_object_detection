@@ -3,7 +3,8 @@ name = "esp32s3-object-detection"
 version = "0.1.0"
 description = "Add your description here"
 authors = [
-    { name = "Clein2312", email = "cleinsarmiento@hotmail.com" }
+    { name = "Clein Sarmiento", email = "cleinalexander.sarmientocastrillon@hochschule-rhein-waal.de" },
+    { name = "Jan Sonntag", email = "jan.sonntag@hochschule-rhein-waal.de" }
 ]
 dependencies = [
     "opencv-python>=4.10.0.84",
@@ -37,3 +38,4 @@ packages = ["src/esp32s3_object_detection"]
 [tool.rye.scripts]
 # Run Script
 get_images = "python ./day_1/get_images.py"
+jupyterlab = "python -m jupyterlab"

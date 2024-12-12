@@ -1,4 +1,11 @@
 # Workshop: Practical Introduction to Artificial Intelligence on Embedded Devices
+This workshop provides a hands-on introduction to the topic of artificial intelligence and the possible use cases on embedded hardware. Participants will gain practical and theoretical experience in artificial intelligence and microcontrollers to detect objects with the help of AI vision. At the end of the workshop participants will be able to create an AI to detect objects with a camera connected to AI running on microcontrollers.
+
+Learning Outcomes
+- Understand the basics of AI and the challenges of running them on microcontrollers
+- The process of generating datasets for detecting custom objects incl. train/test data split
+- Training an AI detecting objects {and tuning the hyperparameters}.
+- Deploying an AI onto a microcontroller.
 
 This workshop was developed as part of the [Latin American Summer School on Robotics (LACORO) 2024] as a three day workshop.
 - [Day 1 - Image Classification via Edge Impulse](./day_1/README.md)
