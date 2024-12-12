@@ -10,7 +10,10 @@ Learning Outcomes
 This workshop was developed as part of the [Latin American Summer School on Robotics (LACORO) 2024] as a three day workshop.
 - [Day 1 - Image Classification via Edge Impulse](./day_1/README.md)
 - [Day 2 - AI for embedded devices from Scratch via Python](./day_2/README.md)
-- [Day 3 - Object Detection on ESP32 and controlling a servo](./day_3/README.md)
+- [Day 3 - Object Detection on ESP32 via Edge Impulse and controlling a servo](./day_3/README.md)
+
+At the end of the workshop the students are able to build a tracker which uses AI to track an object by turning a servo:
+TBD
 
 ## Preparation
 For this project you will need some dependencies. The project uses python version > 3.8, and dependencies are defined within the pyproject.toml file. 
@@ -18,7 +21,19 @@ We will build the dependencies using Rye. Details on the installation below. Als
 We will work with the [Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/). You will also be provided with a servo motor, an antenna and a 3d printed test stand.
 
 ### BOM
-TBD
+Day 1 + 2:
+- Laptop/Computer
+- USB C cable
+- XIAO ESP32S3 Sense
+- optional: better antenna with UFL to SMA connector
+
+Day 3:
+- Laptop/Computer
+- USB C cable
+- XIAO ESP32S3 Sense
+- 3D printed parts (each .stl once, can be found in the folder for day 3)
+- generic 9g Servo Motor (we recommend one from a known brand like Jamara as cheaper once we tried were literally killing XIAO ESP32S3 boards)
+- optional: better antenna with UFL to SMA connector
 
 ### Installing Rye
 We will use Rye fo installing our dependencies. If you want to know more about it, you can watch the [introduction video about rye](https://rye.astral.sh/guide/)
