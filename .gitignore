@@ -15,7 +15,7 @@ src/ei-clein2312-project-1-duck_detection/
 
 #notebooks hypertuning
 notebooks/
-#otebooks/my_dir/
+notebooks/my_dir/
 #notebooks/*.zip
 #notebooks/*.tflite
 #notebooks/*.keras
