@@ -14,11 +14,11 @@ wheels/
 src/ei-clein2312-project-1-duck_detection/
 
 #notebooks hypertuning
-notebooks/*
-notebooks/my_dir/
-notebooks/*.zip
-notebooks/*.tflite
-notebooks/*.keras
+notebooks/
+#otebooks/my_dir/
+#notebooks/*.zip
+#notebooks/*.tflite
+#notebooks/*.keras
 
 #data
 src/images/*.jpg
