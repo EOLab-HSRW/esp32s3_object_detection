@@ -23,3 +23,6 @@ notebooks/*.keras
 #data
 src/images/*.jpg
 data/
+
+# day2
+day_2/my_dir/
