@@ -45,7 +45,11 @@ For this
 - We recommend taking at least 70 images per object, the object shouldn´t be to small and the image should only include the one object you want to classify. Also put the object onto other backgrounds.
 
 ## Training and Deploying the Classifier in Edge Impulse
-First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com/login) and create a new project. (You are limited to 2 private projects in the free version)
+First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com/login) and create a new project. (You are limited to 2 private projects in the free version).
+
+- Once you have created a new project you are ready to load the gathered data. For this click on the Add existing data button and then upload data.
+- Now you should upload only the images of the first class (e.g. ducky or cherry). It is easier if you already separated the classes per folder. We did that already when gathering the data. Choose the corresponding folder from the file explorer and let it split automaticaylly between training and testing (This will do an 80% training and 20% Testing by default). Finally enter the label of the corresponding class explicitly and click on upload data.
+![Example: Uploading data folder of class "ducky"](../resources/day1_upload_data.png)
 
 - Create your Model as explained in the Hands-On
 - Deploy your Model
