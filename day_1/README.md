@@ -47,14 +47,33 @@ For this
 ## Training and Deploying the Classifier in Edge Impulse
 First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com/login) and create a new project. (You are limited to 2 private projects in the free version).
 
+### Building a Machine Learning Project
+
+A machine learning project usually incorporates the following steps:
+
+defining the problem -> getting the data/data ingestion -> analyzing the data -> data preprocessing -> data modelling (training and tuning) -> model testing -> deployment -> model feedback
+** TO DO! Create a graph with the above description**
+
+### Defining the problem
+With this workshop you want to create an image classifier. That means,  given an input image your model should be able to say to which class this image is most likely to belong. Eg. "the image is most likely a ducky".
+
+### Data ingestion
+
 - Once you have created a new project you are ready to load the gathered data. For this click on the Add existing data button and then upload data.
 - Now you should upload only the images of the first class (e.g. ducky or cherry). It is easier if you already separated the classes per folder. We did that already when gathering the data. Choose the corresponding folder from the file explorer and let it split automaticaylly between training and testing (This will do an 80% training and 20% Testing by default). Finally enter the label of the corresponding class explicitly and click on upload data.
-!["Example: Uploading data folder of class "ducky"](../resources/day1_upload_data.png)
 <image src="../resources/day1_upload_data.png" width=600 title="Example: Uploading data folder of class 'ducky'"/>
 
-- Create your Model as explained in the Hands-On
-- Deploy your Model
+- You will be asked if you want to change the type of the project to object detection. Answer no, because you want to work with image classification. 
+- Repeat the steps for all the classes your classifier should be trained on.
 
+### Analyzing the data
+### Data preprocessing
+### Data Modelling / Model tuning
+- Create your Model as explained in the Hands-On
+### Model Testing
+### Deployment
+- Deploy your Model
+### Model feed back
 ## Running inferences
 
 ### Test the model
