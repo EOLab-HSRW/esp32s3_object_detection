@@ -59,7 +59,7 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 
 ### Running live inferences
 - Open "File" > "Examples" > name of your library > "esp32" > "esp32_camera"
-- Update the pins of the Microcontroller, delete lines XXX to XXX and paste in:
+- Update the pins of the Microcontroller, delete lines 35 to 78 and paste in:
 ```
 #define PWDN_GPIO_NUM     -1
 #define RESET_GPIO_NUM    -1
