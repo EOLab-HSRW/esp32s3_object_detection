@@ -72,7 +72,7 @@ With this workshop you want to create an image classifier. That means,  given an
 - Create your Model as explained in the Hands-On
 ### Model Testing
 ### Deployment
-- Deploy your Model
+- To deploy your freshly trained and tested model, we will use the Arduino IDE. First we have to download the model from Edge Impulse. In your Impulse go to the "Deployment" Tab. In the top we first have to decide in what format we want to download our model. Edge Impulse offers the flexibility to choose from many different deployment options. For our purpose we will choose "Arduino Library". Make sure that "Quantized (int8)" is selected. This lowers the total time the microcontroller needs to analyze one image with only a minimal influence on the accurarcy. Click "Build". It will take a bit of time but then you can download the model.
 ### Model feed back
 ## Running inferences
 
