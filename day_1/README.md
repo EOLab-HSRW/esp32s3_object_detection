@@ -50,9 +50,8 @@ First you need to log-in in [Edge Impulse Studio](https://studio.edgeimpulse.com
 ### Building a Machine Learning Project
 
 A machine learning project usually incorporates the following steps:
+<image src="../resources/ML-Pipeline.drawio.svg" width=600 title="Example: Uploading data folder of class 'ducky'"/>
 
-defining the problem -> getting the data/data ingestion -> analyzing the data -> data preprocessing -> data modelling (training and tuning) -> model testing -> deployment -> model feedback
-** TO DO! Create a graph with the above description**
 
 ### Defining the problem
 With this workshop you want to create an image classifier. That means,  given an input image your model should be able to say to which class this image is most likely to belong. Eg. "the image is most likely a ducky".
@@ -66,7 +65,7 @@ With this workshop you want to create an image classifier. That means,  given an
 - You will be asked if you want to change the type of the project to object detection. Answer no, because you want to work with image classification. 
 - Repeat the steps for all the classes your classifier should be trained on.
 
-### Analyzing the data
+### Data Exploration
 ### Data preprocessing
 ### Data Modelling / Model tuning
 - Create your Model as explained in the Hands-On
